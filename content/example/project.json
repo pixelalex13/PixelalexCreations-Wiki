@@ -1,0 +1,34 @@
+{
+  "name": "Example Project",
+  "category": "mods",
+  "icon": "",
+  "description": "Shows every wiki feature. Remove it from projects.json once real projects exist.",
+  "updated": "2026-11-05",
+  "mainSite": "https://www.pixelalexcreations.net/mods/",
+  "links": [
+    {
+      "label": "Modrinth",
+      "url": "https://modrinth.com"
+    }
+  ],
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "overview",
+      "title": "Overview"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Reference"
+    },
+    {
+      "file": "syntax",
+      "title": "Syntax reference"
+    }
+  ]
+}

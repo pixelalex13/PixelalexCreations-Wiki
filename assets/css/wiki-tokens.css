@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("../fonts/minecraft.woff2") format("woff2"),
+    url("../fonts/minecraft.woff") format("woff");
+    font-display: swap;
+}
+
+:root {
+    --wiki-font-family: "Minecraft", Arial, sans-serif;
+    --wiki-font-mono: Consolas, "Courier New", monospace;
+
+    --wiki-bg: #1e1e1e;
+    --wiki-bg-nav: #1a1a1a;
+    --wiki-surface: #232323;
+    --wiki-surface-raised: #2a2a2a;
+    --wiki-surface-inset: #1b1b1b;
+    --wiki-tile: #333;
+    --wiki-placeholder: #444;
+
+    --wiki-border: #333;
+    --wiki-border-strong: #444;
+    --wiki-border-black: #000;
+
+    --wiki-text: #fff;
+    --wiki-text-soft: #ccc;
+    --wiki-text-muted: #aaa;
+    --wiki-text-faint: #777;
+    --wiki-code-text: #e6e6e6;
+
+    --wiki-accent: #6ab04c;
+    --wiki-accent-hover: #7cc45d;
+    --wiki-accent-border: #4a7a2f;
+    --wiki-accent-text: #a3e08a;
+    --wiki-link: #7cc45d;
+    --wiki-link-hover: #a3e08a;
+
+    --wiki-btn-secondary: #444;
+    --wiki-btn-secondary-hover: #555;
+    --wiki-btn-secondary-border: #555;
+    --wiki-discord: #5865F2;
+    --wiki-discord-border: #4752c4;
+
+    --wiki-info: #5b9bd5;
+    --wiki-info-text: #9cc7ef;
+    --wiki-tip: #6ab04c;
+    --wiki-tip-text: #a3e08a;
+    --wiki-warning: #e0a82e;
+    --wiki-warning-text: #ffd666;
+    --wiki-danger: #ff4d4d;
+    --wiki-danger-text: #ff8080;
+
+    --wiki-text-shadow: 4px 4px 0 #000;
+    --wiki-text-shadow-sm: 2px 2px 0 #000;
+    --wiki-shadow-box: 0 6px 0 #000;
+    --wiki-shadow-box-sm: 0 4px 0 #000;
+    --wiki-shadow-popup: 0 10px 25px rgba(0, 0, 0, 0.35);
+    --wiki-overlay: rgba(0, 0, 0, 0.85);
+
+    --wiki-radius-lg: 14px;
+    --wiki-radius-md: 12px;
+    --wiki-radius-icon: 10px;
+    --wiki-radius-sm: 8px;
+    --wiki-radius-xs: 6px;
+
+    --wiki-transition: 0.25s;
+    --wiki-transition-fast: 0.15s;
+
+    --wiki-nav-height: 64px;
+    --wiki-max-width: 1400px;
+    --wiki-sidebar-width: 260px;
+    --wiki-content-width: 900px;
+}

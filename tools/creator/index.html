@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="../../assets/images/favicon.ico">
+    <title>Wiki Creator - Pixelalex Creations</title>
+    <link rel="stylesheet" href="../../assets/css/wiki-tokens.css">
+    <link rel="stylesheet" href="../../assets/css/wiki.css">
+    <link rel="stylesheet" href="creator.css">
+    <script src="../../assets/js/wiki-markdown.js" defer></script>
+    <script src="zip.js" defer></script>
+    <script src="creator.js" defer></script>
+</head>
+<body class="creator">
+    <header class="creator-bar">
+        <a class="creator-brand" href="../../" title="Open the wiki">
+            <img src="../../assets/images/pixelalex_creations-logo.png" alt="" class="creator-logo">
+            <span>Wiki Creator</span>
+        </a>
+        <div class="creator-bar-actions">
+            <span class="creator-save-state" id="saveState">Loading…</span>
+            <div class="creator-mode" role="group" aria-label="Editor mode">
+                <button type="button" class="creator-mode-btn" data-mode="markdown" aria-pressed="true">Markdown</button>
+                <button type="button" class="creator-mode-btn" data-mode="visual" aria-pressed="false">Visual</button>
+            </div>
+            <button type="button" class="wiki-btn wiki-btn-secondary" id="newBtn">New project</button>
+            <button type="button" class="wiki-btn wiki-btn-secondary" id="importZipBtn">Import ZIP</button>
+            <button type="button" class="wiki-btn wiki-btn-secondary" id="importFolderBtn">Import folder</button>
+            <button type="button" class="wiki-btn wiki-btn-primary" id="exportBtn">Export ZIP</button>
+            <input type="file" id="importZipInput" accept=".zip,application/zip" hidden>
+            <input type="file" id="importFolderInput" webkitdirectory hidden>
+        </div>
+    </header>
+
+    <div class="creator-main">
+        <aside class="creator-side">
+            <section class="creator-panel">
+                <h2>Project</h2>
+                <div class="creator-field">
+                    <label for="projId">Web ID</label>
+                    <input id="projId" class="creator-input" placeholder="zephyr" autocomplete="off">
+                    <span class="creator-hint">Same as on the website. Lowercase letters, numbers and _ only.</span>
+                </div>
+                <div class="creator-field">
+                    <label for="projName">Name</label>
+                    <input id="projName" class="creator-input" placeholder="Zephyr" autocomplete="off">
+                </div>
+                <div class="creator-field">
+                    <label for="projCategory">Category</label>
+                    <select id="projCategory" class="creator-input"></select>
+                </div>
+                <div class="creator-field">
+                    <label for="projDescription">Short description</label>
+                    <textarea id="projDescription" class="creator-input" rows="2"></textarea>
+                </div>
+                <div class="creator-field">
+                    <label for="projUpdated">Last updated</label>
+                    <div class="creator-row">
+                        <input type="date" id="projUpdated" class="creator-input creator-date">
+                        <button type="button" class="creator-small-btn" id="projUpdatedToday">Today</button>
+                    </div>
+                    <span class="creator-hint">Shown in the project header of the wiki. Leave empty to hide it.</span>
+                </div>
+                <div class="creator-field">
+                    <label for="projMainSite">Link to the website</label>
+                    <input id="projMainSite" class="creator-input" autocomplete="off">
+                    <span class="creator-hint">Leave empty to use the project card shown as placeholder.</span>
+                </div>
+                <div class="creator-field">
+                    <span class="creator-label">Icon</span>
+                    <div class="creator-icon-box">
+                        <span class="creator-icon-preview" id="projIconPreview"></span>
+                        <button type="button" class="creator-small-btn" id="projIconUpload">Upload</button>
+                        <button type="button" class="creator-small-btn creator-danger" id="projIconRemove">Remove</button>
+                        <input type="file" id="projIconInput" accept="image/*" hidden>
+                    </div>
+                </div>
+                <div class="creator-field">
+                    <span class="creator-label">Extra links</span>
+                    <div class="creator-links" id="linkList"></div>
+                    <button type="button" class="creator-small-btn" id="addLinkBtn">Add link</button>
+                </div>
+            </section>
+
+            <section class="creator-panel">
+                <h2>Pages</h2>
+                <ul class="creator-pages" id="pageList"></ul>
+                <div class="creator-row">
+                    <button type="button" class="creator-small-btn" id="addPageBtn">Add page</button>
+                    <button type="button" class="creator-small-btn" id="addSectionBtn">Add section</button>
+                </div>
+                <div class="creator-page-settings" id="pageSettings"></div>
+            </section>
+
+            <section class="creator-panel">
+                <h2>Images</h2>
+                <div class="creator-assets" id="assetList"></div>
+                <button type="button" class="creator-small-btn" id="assetUploadBtn">Upload images</button>
+                <input type="file" id="assetInput" accept="image/*" multiple hidden>
+                <span class="creator-hint creator-hint-block">You can also paste or drop images into the editor.</span>
+            </section>
+        </aside>
+
+        <section class="creator-work">
+            <div class="creator-toolbar-row">
+                <div class="creator-toolbar" id="toolbar"></div>
+            </div>
+
+            <section class="creator-editor-pane">
+                <textarea id="editor" class="creator-editor" spellcheck="true"></textarea>
+            </section>
+
+            <section class="creator-preview-pane" id="previewPane">
+                <article class="wiki-article" id="preview"></article>
+                <article class="wiki-article creator-visual" id="visual" hidden></article>
+                <div class="creator-resize-handle" id="resizeHandle" hidden title="Drag to resize, double-click to reset">
+                    <span class="creator-resize-label" id="resizeLabel"></span>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <div class="creator-toast" id="toast" role="status" hidden></div>
+    <dialog class="creator-dialog" id="dialog"></dialog>
+</body>
+</html>
