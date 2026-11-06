@@ -263,8 +263,13 @@
         }
     }
 
+    async function memoryBlob(blob, path) {
+        const type = blob.type || CreatorZip.mimeFor(path || blob.name || "");
+        return new Blob([await blob.arrayBuffer()], { type });
+    }
+
     async function uploadImage(file, maxWidth, name) {
-        const blob = await shrinkImage(file, maxWidth);
+        const blob = await memoryBlob(await shrinkImage(file, maxWidth), file.name);
         const path = uniqueAssetPath("images/", sanitizeName(name || file.name || "image.png"));
         addAsset(path, blob);
         renderAssets();
@@ -295,6 +300,7 @@
             const request = action(tx.objectStore(DB_STORE));
             tx.oncomplete = () => resolve(request ? request.result : undefined);
             tx.onerror = () => reject(tx.error);
+            tx.onabort = () => reject(tx.error || new Error("The draft transaction was aborted."));
         });
     }
 
@@ -416,7 +422,7 @@
             if (old) removeAsset(old);
             const ext = (sanitizeName(file.name).match(/\.[a-z0-9]+$/) || [".png"])[0];
             state.project.icon = "icon" + ext;
-            addAsset(state.project.icon, file);
+            addAsset(state.project.icon, await memoryBlob(file, file.name));
             renderIcon();
             renderAssets();
             changed();
@@ -3810,10 +3816,22 @@
             files.push({ path: `${page.file}.md`, data: page.content.replace(/\s*$/, "") + "\n" });
         });
         let skipped = 0;
-        [...state.assets.keys()].sort().forEach(path => {
-            if (isAssetUsed(path)) files.push({ path, data: state.assets.get(path).blob });
-            else skipped++;
-        });
+        const missing = [];
+        for (const path of [...state.assets.keys()].sort()) {
+            if (!isAssetUsed(path)) {
+                skipped++;
+                continue;
+            }
+            try {
+                files.push({ path, data: new Uint8Array(await state.assets.get(path).blob.arrayBuffer()) });
+            } catch {
+                missing.push(path);
+            }
+        }
+        if (missing.length) {
+            toast(`These images could not be read, please upload them again: ${missing.join(", ")}`, true);
+            return;
+        }
         try {
             const blob = await CreatorZip.create(files);
             download(blob, `${p.id}.zip`);
@@ -3861,11 +3879,17 @@
             pages.push({ uid: uid(), type: "page", title: "Overview", file: "overview", autoFile: true, content: "" });
         }
 
+        const loaded = [];
+        const unreadable = [];
+        for (const entry of inside.filter(item => !/\.md$/i.test(item.rel) || item.rel.includes("/"))) {
+            try {
+                loaded.push([entry.rel, await memoryBlob(entry.blob, entry.rel)]);
+            } catch {
+                unreadable.push(entry.rel);
+            }
+        }
         clearAssets();
-        inside.filter(entry => !/\.md$/i.test(entry.rel) || entry.rel.includes("/")).forEach(entry => {
-            const type = entry.blob.type || CreatorZip.mimeFor(entry.rel);
-            addAsset(entry.rel, entry.blob.type ? entry.blob : new Blob([entry.blob], { type }));
-        });
+        loaded.forEach(([path, blob]) => addAsset(path, blob));
 
         state.project = {
             id,
@@ -3881,7 +3905,8 @@
         state.current = pages.find(page => page.type === "page").uid;
         renderAll();
         changed();
-        toast(`Imported ${state.project.name || id}.`);
+        if (unreadable.length) toast(`Imported, but these files could not be read: ${unreadable.join(", ")}`, true);
+        else toast(`Imported ${state.project.name || id}.`);
     }
 
     async function runImport(loader) {
@@ -3956,7 +3981,15 @@
 
         if (draft && draft.project && Array.isArray(draft.project.pages)) {
             state.project = draft.project;
-            (draft.assets || []).forEach(asset => addAsset(asset.path, asset.blob));
+            const lost = [];
+            for (const asset of draft.assets || []) {
+                try {
+                    addAsset(asset.path, await memoryBlob(asset.blob, asset.path));
+                } catch {
+                    lost.push(asset.path);
+                }
+            }
+            if (lost.length) setTimeout(() => toast(`These images could not be restored, please upload them again: ${lost.join(", ")}`, true), 500);
             state.current = draft.current;
         } else {
             state.project = emptyProject();
