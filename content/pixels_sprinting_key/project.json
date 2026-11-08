@@ -1,0 +1,26 @@
+{
+  "name": "Pixels Sprinting Key",
+  "category": "mods",
+  "icon": "icon.png",
+  "description": "A small mod that adds a Sprinting Keybind to older versions.",
+  "mainSite": "https://www.pixelalexcreations.net/mods/#pixels_sprinting_key",
+  "links": [],
+  "updated": "2026-11-06",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}

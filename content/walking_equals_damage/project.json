@@ -1,0 +1,33 @@
+{
+  "name": "WalkingEqualsDamage",
+  "category": "mods",
+  "icon": "icon.png",
+  "description": "Every time you walk, you take damage.",
+  "mainSite": "https://www.pixelalexcreations.net/mods/#walking_equals_damage",
+  "links": [],
+  "updated": "2026-11-06",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Reference"
+    },
+    {
+      "file": "configuration",
+      "title": "Configuration"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}

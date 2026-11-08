@@ -1,0 +1,33 @@
+{
+  "name": "Pixels F3",
+  "category": "mods",
+  "icon": "icon.png",
+  "description": "Adds a small F3 like HUD overlay with only the important debug info.",
+  "mainSite": "https://www.pixelalexcreations.net/mods/#pixels_f3",
+  "links": [],
+  "updated": "2026-11-06",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Reference"
+    },
+    {
+      "file": "configuration",
+      "title": "Configuration"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}

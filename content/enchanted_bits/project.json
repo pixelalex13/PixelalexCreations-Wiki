@@ -1,0 +1,52 @@
+{
+  "name": "Enchanted Bits",
+  "category": "mods",
+  "icon": "icon.png",
+  "description": "Improves aspects around the Enchanting System to make it slightly better.",
+  "mainSite": "https://www.pixelalexcreations.net/mods/#enchanted_bits",
+  "links": [],
+  "updated": "2026-11-06",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Content"
+    },
+    {
+      "file": "shifting_book",
+      "title": "Shifting Book"
+    },
+    {
+      "file": "enchanting_table",
+      "title": "Enchanting Table"
+    },
+    {
+      "file": "other_changes",
+      "title": "Other Changes"
+    },
+    {
+      "section": "Reference"
+    },
+    {
+      "file": "configuration",
+      "title": "Configuration"
+    },
+    {
+      "file": "tags",
+      "title": "Tags"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}
