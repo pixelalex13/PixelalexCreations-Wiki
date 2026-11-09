@@ -13,4 +13,13 @@ Frost Walker freezes a bigger area of water.
 
 This makes it possible to sprint-jump on water while using Frost Walker.
 
-Frost Walker also works while you ride an entity, such as a boat, a minecart or a horse.
+### While riding
+
+Frost Walker also works while you ride an entity, such as a boat, a minecart or a horse. The water around the ridden entity freezes, using the vanilla radius:
+
+| Level | Radius while riding |
+| :---: | :---: |
+| I | 3 |
+| II | 4 |
+
+This also works for mobs that wear Frost Walker boots and ride an entity.
