@@ -1,0 +1,52 @@
+{
+  "name": "Embellishments",
+  "category": "mods",
+  "icon": "icon.png",
+  "description": "Adds a number of embellishments that fit the vibe of the vanilla game.",
+  "mainSite": "https://www.pixelalexcreations.net/mods/#embellishments",
+  "links": [],
+  "updated": "2026-11-10",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Blocks"
+    },
+    {
+      "file": "eye_sensor",
+      "title": "Eye Sensor"
+    },
+    {
+      "file": "encased_redstone",
+      "title": "Encased Redstone"
+    },
+    {
+      "section": "Mechanics"
+    },
+    {
+      "file": "defusing_tnt",
+      "title": "Defusing TNT"
+    },
+    {
+      "file": "head_items",
+      "title": "Head Items"
+    },
+    {
+      "file": "invisible_name_tag",
+      "title": "Invisible Name Tag"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}

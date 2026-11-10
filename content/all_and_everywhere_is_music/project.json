@@ -1,0 +1,33 @@
+{
+  "name": "All and Everywhere is Music",
+  "category": "resource_packs",
+  "icon": "icon.png",
+  "description": "Lets every music play everywhere!",
+  "mainSite": "https://www.pixelalexcreations.net/resource_packs/#all_and_everywhere_is_music",
+  "links": [],
+  "updated": "2026-11-10",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Content"
+    },
+    {
+      "file": "music",
+      "title": "Music"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}
