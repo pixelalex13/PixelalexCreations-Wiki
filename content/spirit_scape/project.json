@@ -1,0 +1,100 @@
+{
+  "name": "Spirit Scape",
+  "category": "mods",
+  "icon": "icon.png",
+  "description": "Step into a world where spirits remember what time has forgotten. Explore the Spirit Realm, uncover echoes of the past, and bring lost knowledge back into the present.",
+  "mainSite": "https://www.pixelalexcreations.net/mods/#spirit_scape",
+  "links": [],
+  "updated": "2026-11-12",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Materials"
+    },
+    {
+      "file": "spirit_crystal",
+      "title": "Spirit Crystal"
+    },
+    {
+      "file": "crafting_materials",
+      "title": "Crafting Materials"
+    },
+    {
+      "section": "Equipment"
+    },
+    {
+      "file": "tools_and_weapons",
+      "title": "Tools & Weapons"
+    },
+    {
+      "file": "armor",
+      "title": "Armor"
+    },
+    {
+      "section": "Muddy Items"
+    },
+    {
+      "file": "muddy_items",
+      "title": "Muddy Items"
+    },
+    {
+      "file": "soap_bars",
+      "title": "Soap Bars"
+    },
+    {
+      "file": "cleaning_station",
+      "title": "Cleaning Station"
+    },
+    {
+      "section": "World"
+    },
+    {
+      "file": "graveyard",
+      "title": "Graveyard"
+    },
+    {
+      "file": "gravedigger",
+      "title": "Gravedigger"
+    },
+    {
+      "file": "urn",
+      "title": "Urn"
+    },
+    {
+      "file": "dimensional_rift",
+      "title": "Dimensional Rift"
+    },
+    {
+      "section": "Reference"
+    },
+    {
+      "file": "commands",
+      "title": "Commands"
+    },
+    {
+      "file": "tags",
+      "title": "Tags"
+    },
+    {
+      "section": "Help"
+    },
+    {
+      "file": "known_issues",
+      "title": "Known Issues"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}

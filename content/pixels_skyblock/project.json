@@ -1,0 +1,37 @@
+{
+  "name": "Pixels Skyblock",
+  "category": "worlds",
+  "icon": "icon.png",
+  "description": "A remake of the classic Skyblock, updated for newer versions and with over 50 custom advancements.",
+  "mainSite": "https://www.pixelalexcreations.net/worlds/#pixels_skyblock",
+  "links": [],
+  "updated": "2026-11-11",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Guide"
+    },
+    {
+      "file": "how_to_play",
+      "title": "How to play"
+    },
+    {
+      "file": "advancements",
+      "title": "Advancements"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}
