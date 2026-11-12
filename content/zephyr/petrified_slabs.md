@@ -15,21 +15,19 @@ B: images/items/oak_slab.png "Oak Slab" | images/items/spruce_slab.png "Spruce S
 
 ## All Petrified Slabs
 
-| Slab | Made from |
-|---|---|
-| Petrified Oak Slab | Oak Slab |
-| Petrified Spruce Slab | Spruce Slab |
-| Petrified Birch Slab | Birch Slab |
-| Petrified Jungle Slab | Jungle Slab |
-| Petrified Acacia Slab | Acacia Slab |
-| Petrified Dark Oak Slab | Dark Oak Slab |
-| Petrified Mangrove Slab | Mangrove Slab |
-| Petrified Cherry Slab | Cherry Slab |
-| Petrified Pale Oak Slab | Pale Oak Slab |
-| Petrified Poplar Slab | Poplar Slab (26.3 only) |
-| Petrified Bamboo Slab | Bamboo Slab |
-| Petrified Bamboo Mosaic Slab | Bamboo Mosaic Slab |
-| Petrified Crimson Slab | Crimson Slab |
-| Petrified Warped Slab | Warped Slab |
+- :icon[images/items/oak_slab.png]{size=20} Petrified Oak Slab
+- :icon[images/items/spruce_slab.png]{size=20} Petrified Spruce Slab
+- :icon[images/items/birch_slab.png]{size=20} Petrified Birch Slab
+- :icon[images/items/jungle_slab.png]{size=20} Petrified Jungle Slab
+- :icon[images/items/acacia_slab.png]{size=20} Petrified Acacia Slab
+- :icon[images/items/dark_oak_slab.png]{size=20} Petrified Dark Oak Slab
+- :icon[images/items/mangrove_slab.png]{size=20} Petrified Mangrove Slab
+- :icon[images/items/cherry_slab.png]{size=20} Petrified Cherry Slab
+- :icon[images/items/pale_oak_slab.png]{size=20} Petrified Pale Oak Slab
+- :icon[images/items/poplar_slab.png]{size=20} Petrified Poplar Slab (26.3 only)
+- :icon[images/items/bamboo_slab.png]{size=20} Petrified Bamboo Slab
+- :icon[images/items/bamboo_mosaic_slab.png]{size=20} Petrified Bamboo Mosaic Slab
+- :icon[images/items/crimson_slab.png]{size=20} Petrified Crimson Slab
+- :icon[images/items/warped_slab.png]{size=20} Petrified Warped Slab
 
 In the Creative inventory, each Petrified Slab is placed right after its wooden version.
