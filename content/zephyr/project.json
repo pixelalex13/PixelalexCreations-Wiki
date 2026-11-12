@@ -1,0 +1,97 @@
+{
+  "name": "Zephyr",
+  "category": "mods",
+  "icon": "icon.png",
+  "description": "A vanilla-plus mod that restores removed and unused content, fixes overlooked bugs, and refines underutilized mechanics.",
+  "mainSite": "https://www.pixelalexcreations.net/mods/#zephyr",
+  "links": [],
+  "updated": "2026-11-12",
+  "pages": [
+    {
+      "section": "Getting started"
+    },
+    {
+      "file": "introduction",
+      "title": "Introduction"
+    },
+    {
+      "file": "installation",
+      "title": "Installation"
+    },
+    {
+      "section": "Removed and Unused Content"
+    },
+    {
+      "file": "clovers_and_potions",
+      "title": "Clovers & Potions"
+    },
+    {
+      "file": "illusioner",
+      "title": "Illusioner"
+    },
+    {
+      "file": "paintings",
+      "title": "Paintings"
+    },
+    {
+      "file": "petrified_slabs",
+      "title": "Petrified Slabs"
+    },
+    {
+      "file": "formatting_codes",
+      "title": "Formatting Codes"
+    },
+    {
+      "file": "killer_bunny",
+      "title": "Killer Bunny"
+    },
+    {
+      "section": "Underutilized Mechanics"
+    },
+    {
+      "file": "bone_meal",
+      "title": "Bone Meal"
+    },
+    {
+      "file": "item_frames",
+      "title": "Item Frames"
+    },
+    {
+      "file": "armor_stands",
+      "title": "Armor Stands"
+    },
+    {
+      "file": "void_banner",
+      "title": "Void Banner"
+    },
+    {
+      "file": "other_tweaks",
+      "title": "Other Tweaks"
+    },
+    {
+      "section": "Overlooked Bugs"
+    },
+    {
+      "file": "bug_fixes",
+      "title": "Bug Fixes"
+    },
+    {
+      "section": "Reference"
+    },
+    {
+      "file": "data_components",
+      "title": "Data Components"
+    },
+    {
+      "section": "Help"
+    },
+    {
+      "file": "known_issues",
+      "title": "Known Issues"
+    },
+    {
+      "file": "changelog",
+      "title": "Changelog"
+    }
+  ]
+}
